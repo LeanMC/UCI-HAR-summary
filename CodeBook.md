@@ -1,11 +1,14 @@
-<h1>Code Book</h1>
+Code Book
+=========
 
-<h2>Description</h2>
+Description
+-----------
 This data is the result of subsetting and analyzing the [UCI HAR Dataset](http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones). The original dataset is split into two subsets: 'test' and 'train'. These subsets were merged into one. The original dataset had information about test subjects and activities stored in separate files. These files were also merged with the other data. Activities in the original dataset were represented with integers, which were replaced with descriptive activity names. The variable names for measured data in the original set were stored in a separate file. These were extracted and set as column names. This large, rectangular data was stored in a tibble called `testrain`.
 
 Next, `testrain` was subsetted, selecting only columns containing `mean()` and `std()`. Based on a close reading of the original dataset's README files and feature names, I believe these features best represent "the measurements on the mean and standard deviation for each measurement". Finally, the mean for each variable for each activity and each subject was calculated and stored in a new, independent tidy data set called `tidy`.
 
-<h2>Variables</h2>
+Variables
+---------
 Below is a table of the variables in `tidy`, along with a brief description.
 
 Variable | Description
