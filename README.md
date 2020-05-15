@@ -13,7 +13,7 @@ What follows is duplicated in `CodeBook.md` for the simple reason that the assig
 
 Gripes and disclaimers aside, here is a brief summary of what was done to the original data set:
 - The original dataset is split into two subsets: `test` and `train`. These subsets were merged into one. 
-- The original dataset had information about test subjects and activities stored in separate files. These files were joined with the other data. 
+- The original dataset had information about subjects and activities stored in separate files. These files were joined with the other data. 
 - Activities in the original dataset were represented with integers, which have been replaced with descriptive activity names. 
 - The variable names for measured data in the original set were stored in a separate file. These were extracted and used to set variable (i.e. column) names. 
 - The resulting tibble was stored as `testrain`.
