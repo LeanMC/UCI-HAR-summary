@@ -11,7 +11,7 @@ A brief summary of what was done to the original data set:
 - Activities in the original dataset were represented with integers, which have been replaced with descriptive activity names. - The variable names for measured data in the original set were stored in a separate file. These were extracted and used to set variable (i.e. column) names. 
 - The resulting tibble was stored as `testrain`.
 - `testrain` was subsetted, selecting only columns containing `mean()` and `std()`. Based on a close reading of the original dataset's `README` files and feature names, I believe these features best represent "the measurements on the mean and standard deviation for each measurement". 
-- The mean for each variable for each activity and each subject was calculated and stored in a new, independent tidy data set called `tidy`.
+- "The average of each variable for each activity and each subject" was calculated and stored in a new, independent tidy data set called `tidy`.
 - This tibble was exported using `write.table`.
 
 Variables
