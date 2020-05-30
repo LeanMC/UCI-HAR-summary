@@ -23,6 +23,16 @@ Variable | Description
 -------- | -----------
 `subject` | An integer representing the subject completing the activity. Subjects are numbered from 1-30.
 `activity` | Categorical. One of `walking`, `walking uphill`, `walking downhill`, `sitting`, `standing`, or `laying`.
-`tBodyAcc-mean()-X`, `tBodyAcc-mean()-Y`, et al | The remaining variables are the averages (arithmetic means) of all features from the original data set whose names contained the strings `mean()` or `std()`. As best I can tell from the original data set's documentation, variables whose names contain `Acc` are measured in 'standard gravity units' (g), while variables whose names contain `Gyro` are in radians/second. Presumably, the `Jerk` variables are in g/second.
+`tBodyAcc-mean()-X`, `tBodyAcc-mean()-Y`, et al | The remaining variables are the averages (arithmetic means) of all features from the original data set whose names contained the strings `mean()` or `std()`. See the note below about their units.
 
-N.B.: More details about the measurement of these variables can be found in the original data set.
+Note about units
+----------------
+As best I can tell from the original data set's documentation, variables whose names contain `Acc` were originally measured in 'standard gravity units' (g), while variables whose names contain `Gyro` were measured in radians/second. Presumably, the `Jerk` variables were measured in g/second, but this is not explicitly documented. It should be noted that the measurements have also been filtered heavily, according to the documentation:
+
+>they were filtered using a median filter and a 3rd order low pass Butterworth filter with a corner frequency of 20 Hz to remove noise. Similarly, the acceleration signal was then separated into body and gravity acceleration signals (tBodyAcc-XYZ and tGravityAcc-XYZ) using another low pass Butterworth filter with a corner frequency of 0.3 Hz. 
+
+>Subsequently, the body linear acceleration and angular velocity were derived in time to obtain Jerk signals (tBodyAccJerk-XYZ and tBodyGyroJerk-XYZ). Also the magnitude of these three-dimensional signals were calculated using the Euclidean norm (tBodyAccMag, tGravityAccMag, tBodyAccJerkMag, tBodyGyroMag, tBodyGyroJerkMag). 
+
+>Finally a Fast Fourier Transform (FFT) was applied to some of these signals producing fBodyAcc-XYZ, fBodyAccJerk-XYZ, fBodyGyro-XYZ, fBodyAccJerkMag, fBodyGyroMag, fBodyGyroJerkMag. (Note the 'f' to indicate frequency domain signals). 
+
+All of this is a long-winded way of saying that I'm not really sure what to call the units of these features, but I *do* think they still bear a meaningful correlation to their unfiltered origins, wihch is why I've included the original units in this note. I strongly encourage curious parties to read `features_info.txt` from the original data set for more information.
