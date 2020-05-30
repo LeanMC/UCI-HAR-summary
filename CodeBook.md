@@ -6,14 +6,14 @@ Description
 This data is the result of subsetting and analyzing the [UCI HAR Dataset](http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones). 
 
 A brief summary of what was done to the original data set:
-- The original dataset is split into two subsets: `test` and `train`. These subsets were merged into one. 
+- The original dataset was split into two subsets: `test` and `train`. These subsets were merged into one. 
 - The original dataset had information about subjects and activities stored in separate files. These files were joined with the other data. 
 - Activities in the original dataset were represented with integers, which have been replaced with descriptive activity names. 
 - The variable names for measured data in the original set were stored in a separate file. These were extracted and used to set variable (i.e. column) names. 
 - The resulting tibble was stored as `testrain`.
 - `testrain` was subsetted, selecting only columns containing `mean()` and `std()`. Based on a close reading of the original dataset's `README` files and feature names, I believe these features best represent "the measurements on the mean and standard deviation for each measurement". 
 - "The average of each variable for each activity and each subject" was calculated and stored in a new, independent tidy data set called `tidy`.
-- This tibble was exported using `write.table`.
+- This tibble was exported using `write.table` and submitted along with links to this repository. I have elected not to include course-specific code and data here so as to not waste GitHub's disk space.
 
 Variables
 ---------
