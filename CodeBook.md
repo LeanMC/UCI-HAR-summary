@@ -13,7 +13,7 @@ A brief summary of what was done to the original data set:
 - The resulting tibble was stored as `testrain`.
 - `testrain` was subsetted, selecting only columns containing `mean()` and `std()`. Based on a close reading of the original dataset's `README` files and feature names, I believe these features best represent "the measurements on the mean and standard deviation for each measurement". 
 - "The average of each variable for each activity and each subject" was calculated and stored in a new, independent tidy data set called `tidy`.
-- This tibble was exported using `write.table` and submitted along with links to this repository. I have elected not to include course-specific code and data here so as to not waste GitHub's disk space.
+- This tibble was exported using `write.table` and submitted for grading along with links to this repository. I have elected not to include course-specific code and data here so as to not waste GitHub's disk space.
 
 Variables
 ---------
